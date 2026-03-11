@@ -114,13 +114,12 @@ function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex flex-col leading-none">
-          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.5rem", color: "#F5C400", letterSpacing: "0.06em" }}>
-            TRA HAULING
-          </span>
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.75rem", color: "#888", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-            &amp; EXCAVATING
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/tra_logo_final_914f49e0.png"
+            alt="TRA Hauling & Excavating"
+            style={{ height: "64px", width: "auto", objectFit: "contain" }}
+          />
         </a>
 
         {/* Desktop Nav */}
