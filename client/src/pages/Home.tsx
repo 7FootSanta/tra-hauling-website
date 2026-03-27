@@ -686,7 +686,7 @@ function ContactSection() {
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Right: Map & Form */}
           <div
             style={{
               opacity: visible ? 1 : 0,
@@ -694,6 +694,27 @@ function ContactSection() {
               transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
             }}
           >
+            {/* Service Area Map */}
+            <div className="mb-6 rounded-lg overflow-hidden" style={{ border: "2px solid #2a2a2a", height: "280px" }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.8839123456!2d-75.6!3d40.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c43f8e8e8e8e8d%3A0x1234567890abcdef!2s1087%20Fireline%20Rd%2C%20Palmerton%2C%20PA!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: "none" }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="mb-6 p-4" style={{ background: "#111", border: "1px solid #2a2a2a", borderRadius: "4px" }}>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#F5C400", marginBottom: "0.5rem" }}>
+                Service Area
+              </div>
+              <p style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", lineHeight: "1.5" }}>
+                We proudly serve a <strong style={{ color: "#fff" }}>25-mile radius</strong> from Palmerton, PA, covering Carbon County and surrounding areas. If you're unsure if we reach your location, give us a call at <strong style={{ color: "#F5C400" }}>(570) 249-8566</strong>.
+              </p>
+            </div>
+
             {submitted ? (
               <div
                 className="flex flex-col items-center justify-center h-full p-12 text-center"
