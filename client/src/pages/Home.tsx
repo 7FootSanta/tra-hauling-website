@@ -590,8 +590,24 @@ function ReviewsSection() {
 
 function ContactSection() {
   const { ref, visible } = useScrollReveal();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
+  const [form, setForm] = useState<{ name: string; phone: string; email: string; message: string; photos: File[] }>({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+    photos: [],
+  });
   const [submitted, setSubmitted] = useState(false);
+  const [photoPreview, setPhotoPreview] = useState<string[]>([]);
+
+  const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    setForm({ ...form, photos: files });
+    
+    // Create preview URLs
+    const previews = files.map(file => URL.createObjectURL(file));
+    setPhotoPreview(previews);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -712,8 +728,8 @@ function ContactSection() {
                     <input
                       type={field.type}
                       placeholder={field.placeholder}
-                      value={form[field.key as keyof typeof form]}
-                      onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
+                      value={form[field.key as keyof Omit<typeof form, 'photos'>] || ""}
+                      onChange={(e) => setForm({ ...form, [field.key]: e.target.value } as any)}
                       className="w-full px-4 py-3 text-sm outline-none transition-colors"
                       style={{
                         background: "#1A1A1A",
@@ -737,8 +753,8 @@ function ContactSection() {
                   <textarea
                     rows={4}
                     placeholder="Describe the job or service you need..."
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    value={form.message || ""}
+                    onChange={(e) => setForm({ ...form, message: e.target.value } as any)}
                     className="w-full px-4 py-3 text-sm outline-none transition-colors resize-none"
                     style={{
                       background: "#1A1A1A",
@@ -749,6 +765,46 @@ function ContactSection() {
                     onFocus={(e) => (e.target.style.borderColor = "#F5C400")}
                     onBlur={(e) => (e.target.style.borderColor = "#2a2a2a")}
                   />
+                </div>
+
+                <div>
+                  <label
+                    className="block text-xs font-semibold tracking-widest uppercase mb-1.5"
+                    style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "#888", letterSpacing: "0.15em" }}
+                  >
+                    Upload Photos (Optional)
+                  </label>
+                  <input
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    onChange={handlePhotoChange}
+                    className="w-full px-4 py-3 text-sm outline-none transition-colors"
+                    style={{
+                      background: "#1A1A1A",
+                      border: "2px dashed #2a2a2a",
+                      color: "#888",
+                      fontFamily: "'Barlow', sans-serif",
+                      cursor: "pointer",
+                    }}
+                    onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "#F5C400")}
+                    onBlur={(e) => ((e.target as HTMLInputElement).style.borderColor = "#2a2a2a")}
+                  />
+                  {photoPreview.length > 0 && (
+                    <div className="mt-3 grid grid-cols-3 gap-2">
+                      {photoPreview.map((preview, idx) => (
+                        <div key={idx} className="relative overflow-hidden" style={{ borderRadius: "4px" }}>
+                          <img src={preview} alt={`Preview ${idx}`} className="w-full h-20 object-cover" />
+                          <div className="text-xs text-center mt-1" style={{ color: "#888" }}>
+                            {form.photos[idx]?.name.substring(0, 12)}...
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <p className="text-xs mt-2" style={{ color: "#555", fontFamily: "'Barlow', sans-serif" }}>
+                    Upload up to 5 photos to show the project area
+                  </p>
                 </div>
 
                 <button
@@ -766,7 +822,7 @@ function ContactSection() {
                 </button>
 
                 <p className="text-xs text-center" style={{ color: "#555", fontFamily: "'Barlow', sans-serif" }}>
-                  * Note: This is a mock contact form. To finalize, connect to a backend or email service.
+                  * Note: This is a mock contact form. To finalize, connect to a backend or email service. Photos will be attached when integrated.
                 </p>
               </form>
             )}
