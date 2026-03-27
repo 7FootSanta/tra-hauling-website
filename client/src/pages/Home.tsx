@@ -854,6 +854,160 @@ function ContactSection() {
   );
 }
 
+function FAQSection() {
+  const { ref, visible } = useScrollReveal();
+  const [expanded, setExpanded] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: "What is your service area?",
+      answer: "We proudly serve a 25-mile radius from our Palmerton, PA location, covering Carbon County and surrounding areas. If you're unsure whether we reach your location, give us a call at (570) 249-8566.",
+    },
+    {
+      question: "Do you work on weekends and holidays?",
+      answer: "We're always open and available! Whether you need emergency services or scheduled work, we can often accommodate weekend and holiday requests. Call us to discuss your timeline.",
+    },
+    {
+      question: "How quickly can you respond to urgent jobs?",
+      answer: "We pride ourselves on fast response times. For many urgent requests, we can be on-site the same day. Contact us directly at (570) 249-8566 to discuss your emergency needs.",
+    },
+    {
+      question: "Do you provide free estimates?",
+      answer: "Yes! We offer free estimates for all services. Simply contact us with details about your project, upload photos if helpful, and we'll provide you with a competitive quote.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer: "We accept all major payment methods. Contact us directly to discuss payment options and arrange what works best for your project.",
+    },
+    {
+      question: "Are you fully insured?",
+      answer: "Yes, we are fully insured and licensed to operate in Pennsylvania. Your peace of mind is our priority on every job.",
+    },
+    {
+      question: "Can you handle large commercial projects?",
+      answer: "Absolutely! We serve both residential and commercial clients. Whether it's a small residential job or a large commercial project, we have the equipment and expertise to handle it.",
+    },
+    {
+      question: "How do I get started?",
+      answer: "Getting started is easy! Call us at (570) 249-8566, email trahauling@gmail.com, or use the contact form on this page. We'll discuss your project and provide a free estimate.",
+    },
+  ];
+
+  return (
+    <section
+      id="faq"
+      className="py-24"
+      style={{ background: "#1A1A1A", borderTop: "4px solid #F5C400" }}
+    >
+      <div className="container" ref={ref}>
+        <div
+          className="inline-block mb-3 px-3 py-1"
+          style={{ background: "#F5C400", color: "#1A1A1A", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.25em", textTransform: "uppercase" }}
+        >
+          Questions?
+        </div>
+        <h2
+          style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "#fff", lineHeight: 1, marginBottom: "2rem" }}
+        >
+          FREQUENTLY ASKED
+          <br />
+          <span style={{ color: "#F5C400" }}>QUESTIONS</span>
+        </h2>
+
+        <div className="max-w-3xl space-y-3">
+          {faqs.map((faq, idx) => (
+            <div
+              key={idx}
+              style={{
+                background: "#111",
+                border: "1px solid #2a2a2a",
+                borderRadius: "4px",
+                overflow: "hidden",
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.5s ease ${idx * 0.05}s, transform 0.5s ease ${idx * 0.05}s`,
+              }}
+            >
+              <button
+                onClick={() => setExpanded(expanded === idx ? null : idx)}
+                className="w-full px-6 py-4 flex items-center justify-between text-left transition-colors hover:bg-opacity-80"
+                style={{
+                  background: expanded === idx ? "#1a1a1a" : "transparent",
+                  borderBottom: expanded === idx ? "1px solid #2a2a2a" : "none",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Barlow', sans-serif",
+                    fontSize: "1rem",
+                    fontWeight: 600,
+                    color: "#fff",
+                  }}
+                >
+                  {faq.question}
+                </span>
+                <div
+                  style={{
+                    transform: expanded === idx ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "transform 0.3s ease",
+                    color: "#F5C400",
+                  }}
+                >
+                  <ChevronDown className="w-5 h-5" />
+                </div>
+              </button>
+              {expanded === idx && (
+                <div
+                  className="px-6 py-4"
+                  style={{
+                    background: "#0d0d0d",
+                    borderTop: "1px solid #2a2a2a",
+                    color: "#aaa",
+                    fontFamily: "'Barlow', sans-serif",
+                    fontSize: "0.95rem",
+                    lineHeight: "1.6",
+                  }}
+                >
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div
+          className="mt-12 p-6 text-center"
+          style={{
+            background: "#111",
+            border: "1px solid #2a2a2a",
+            borderRadius: "4px",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
+          }}
+        >
+          <p style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif", marginBottom: "1rem" }}>
+            Didn't find your answer?
+          </p>
+          <a
+            href="#contact"
+            className="inline-block px-6 py-3 font-bold text-sm tracking-wider uppercase transition-all hover:scale-[1.05]"
+            style={{
+              background: "#F5C400",
+              color: "#1A1A1A",
+              fontFamily: "'Barlow Condensed', sans-serif",
+              letterSpacing: "0.15em",
+              borderRadius: "4px",
+            }}
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer style={{ background: "#0d0d0d", borderTop: "1px solid #1a1a1a" }}>
@@ -947,6 +1101,7 @@ export default function Home() {
       <AboutSection />
       <ReviewsSection />
       <ContactSection />
+      <FAQSection />
       <Footer />
     </div>
   );
