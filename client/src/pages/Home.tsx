@@ -30,37 +30,37 @@ const SERVICES: Service[] = [
   {
     icon: <Shovel className="w-8 h-8" />,
     title: "Excavating",
-    description: "Professional excavation for residential and commercial projects. Site preparation, trenching, grading, and land clearing handled with precision.",
+    description: "Professional excavation services in Palmerton, PA. Site preparation, trenching, grading, and land clearing for residential and commercial projects in Carbon County.",
     image: SERVICE_EXCAVATING,
   },
   {
     icon: <Truck className="w-8 h-8" />,
     title: "Hauling",
-    description: "Reliable hauling services for dirt, gravel, debris, and materials. We move what you need, when you need it — no job too big or too small.",
+    description: "Reliable hauling services in Palmerton, PA for dirt, gravel, debris, and construction materials. Fast, professional delivery throughout the 25-mile service area.",
     image: SERVICE_HAULING,
   },
   {
     icon: <Building2 className="w-8 h-8" />,
     title: "Demolition",
-    description: "Safe and efficient demolition of structures, concrete, and foundations. We clear the way for your next project quickly and responsibly.",
+    description: "Professional demolition services in Palmerton, PA. Safe and efficient removal of structures, concrete, and foundations for residential and commercial properties.",
     image: SERVICE_DEMOLITION,
   },
   {
     icon: <Snowflake className="w-8 h-8" />,
     title: "Snow Plowing",
-    description: "24/7 snow removal and plowing services throughout the Palmerton area. Keep your property safe and accessible all winter long.",
+    description: "24/7 snow plowing and removal in Palmerton, PA. Driveways, parking lots, and commercial properties. Always ready when winter weather strikes.",
     image: SERVICE_SNOW,
   },
   {
     icon: <Trash2 className="w-8 h-8" />,
     title: "Junk Removal",
-    description: "Fast, affordable junk and debris removal. We show up the same day and haul it all away — leaving your property clean and clear.",
+    description: "Professional junk removal in Palmerton, PA. Quick, affordable cleanup for residential and commercial properties. Same-day service available.",
     image: SERVICE_HAULING,
   },
   {
     icon: <Wrench className="w-8 h-8" />,
     title: "Property Services",
-    description: "Your all-inclusive property service company. If you need it done, we can handle it. From land prep to cleanup, TRA does it all.",
+    description: "All-inclusive property services in Palmerton, PA. Site preparation, cleanup, maintenance, and improvement. One-stop solution for all your property needs.",
     image: SERVICE_EXCAVATING,
   },
 ];
@@ -336,7 +336,7 @@ function ServicesSection() {
             OUR <span style={{ color: "#F5C400" }}>SERVICES</span>
           </h2>
           <p className="mt-4 text-base max-w-xl" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
-            From excavation to snow removal, TRA Hauling &amp; Excavating handles every aspect of your property service needs with speed and professionalism.
+            Professional excavating, hauling, demolition, snow plowing, junk removal and property services in Palmerton, PA and surrounding Carbon County areas.
           </p>
         </div>
 
@@ -450,10 +450,10 @@ function AboutSection() {
               <span style={{ color: "#F5C400" }}>WE CAN HANDLE IT</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed" style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif" }}>
-              TRA Hauling &amp; Excavating is your all-inclusive property service company based in Palmerton, Pennsylvania. We take pride in delivering fast, reliable, and affordable services to homeowners, contractors, and businesses throughout the region.
+              TRA Hauling &amp; Excavating is your all-inclusive property service company serving Palmerton, PA and surrounding Carbon County areas. We provide professional excavating, hauling, demolition, snow plowing, and junk removal services to homeowners, contractors, and businesses.
             </p>
             <p className="mt-4 text-base leading-relaxed" style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif" }}>
-              Whether you need a site excavated, debris hauled away, a structure demolished, or your driveway plowed after a snowstorm — our team shows up ready to work. We're responsive, professional, and priced right.
+              With 24/7 availability and a 25-mile service area, we handle excavation projects, debris removal, structure demolition, winter snow plowing, and complete property cleanup. Fast response time, competitive pricing, and professional results — that's the TRA difference.
             </p>
 
             {/* Contact details */}
