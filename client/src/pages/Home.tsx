@@ -30,37 +30,37 @@ const SERVICES: Service[] = [
   {
     icon: <Shovel className="w-8 h-8" />,
     title: "Excavating",
-    description: "Professional excavation services in Palmerton, PA. Site preparation, trenching, grading, and land clearing for residential and commercial projects in Carbon County.",
+    description: "Professional excavation services in the Palmerton, PA area. Site preparation, trenching, grading, and land clearing for residential and commercial projects in Carbon County.",
     image: SERVICE_EXCAVATING,
   },
   {
     icon: <Truck className="w-8 h-8" />,
     title: "Hauling",
-    description: "Reliable hauling services in Palmerton, PA for dirt, gravel, debris, and construction materials. Fast, professional delivery throughout the 25-mile service area.",
+    description: "Reliable hauling services in the Palmerton, PA area for dirt, gravel, debris, and construction materials. Fast, professional delivery throughout the 25-mile service area.",
     image: SERVICE_HAULING,
   },
   {
     icon: <Building2 className="w-8 h-8" />,
     title: "Demolition",
-    description: "Professional demolition services in Palmerton, PA. Safe and efficient removal of structures, concrete, and foundations for residential and commercial properties.",
+    description: "Professional demolition services in the Palmerton, PA area. Safe and efficient removal of structures, concrete, and foundations for residential and commercial properties.",
     image: SERVICE_DEMOLITION,
   },
   {
     icon: <Snowflake className="w-8 h-8" />,
     title: "Snow Plowing",
-    description: "24/7 snow plowing and removal in Palmerton, PA. Driveways, parking lots, and commercial properties. Always ready when winter weather strikes.",
+    description: "24/7 snow plowing and removal in the Palmerton, PA area. Driveways, parking lots, and commercial properties. Always ready when winter weather strikes.",
     image: SERVICE_SNOW,
   },
   {
     icon: <Trash2 className="w-8 h-8" />,
     title: "Junk Removal",
-    description: "Professional junk removal in Palmerton, PA. Quick, affordable cleanup for residential and commercial properties. Same-day service available.",
+    description: "Professional junk removal in the Palmerton, PA area. Quick, affordable cleanup for residential and commercial properties. Same-day service available.",
     image: SERVICE_HAULING,
   },
   {
     icon: <Wrench className="w-8 h-8" />,
     title: "Property Services",
-    description: "All-inclusive property services in Palmerton, PA. Site preparation, cleanup, maintenance, and improvement. One-stop solution for all your property needs.",
+    description: "All-inclusive property services in the Palmerton, PA area. Site preparation, cleanup, maintenance, and improvement. One-stop solution for all your property needs.",
     image: SERVICE_EXCAVATING,
   },
 ];
@@ -335,8 +335,8 @@ function ServicesSection() {
           >
             OUR <span style={{ color: "#F5C400" }}>SERVICES</span>
           </h2>
-          <p className="mt-4 text-base max-w-xl" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
-            Professional excavating, hauling, demolition, snow plowing, junk removal and property services in Palmerton, PA and surrounding Carbon County areas.
+            <p className="mt-4 text-base max-w-xl" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
+            Professional excavating, hauling, demolition, snow plowing, junk removal and property services in the Palmerton, PA area and surrounding Carbon County.
           </p>
         </div>
 
@@ -450,7 +450,7 @@ function AboutSection() {
               <span style={{ color: "#F5C400" }}>WE CAN HANDLE IT</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed" style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif" }}>
-              TRA Hauling &amp; Excavating is your all-inclusive property service company serving Palmerton, PA and surrounding Carbon County areas. We provide professional excavating, hauling, demolition, snow plowing, and junk removal services to homeowners, contractors, and businesses.
+              TRA Hauling &amp; Excavating is your all-inclusive property service company serving the Palmerton, PA area and surrounding Carbon County. We provide professional excavating, hauling, demolition, snow plowing, and junk removal services to homeowners, contractors, and businesses.
             </p>
             <p className="mt-4 text-base leading-relaxed" style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif" }}>
               With 24/7 availability and a 25-mile service area, we handle excavation projects, debris removal, structure demolition, winter snow plowing, and complete property cleanup. Fast response time, competitive pricing, and professional results — that's the TRA difference.
