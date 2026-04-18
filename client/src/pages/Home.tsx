@@ -11,12 +11,12 @@ import { Phone, Mail, MapPin, Clock, ChevronDown, Menu, X, Facebook, Star, Truck
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/hero_banner-KggwAoz9RQfnfGhAzu86AP.webp";
-const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_excavating_v2-6c3aDgGVB6r7BNQHgvwH3R.webp";
-const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling_v2-MeLMp7NzW53XvWgbFZ9D8g.webp";
-const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow-PP4RcndMnjVuP3kXcezsSd.webp";
-const SERVICE_DEMOLITION = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_demolition-ksWFduDDR35FaKjywdBFWM.webp";
-const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_removal-atavvMdVomU8J5eC5faAdC.webp";
-const SERVICE_PROPERTY_SERVICES = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_property_services_v2-7dQViaeGdSkVyXMgSgDfjp.webp";
+const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_excavating_residential-DKepQuR7wVfdmFmYppauVr.webp";
+const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling_residential-So4hXCFWZ37wArBA8sZHaP.webp";
+const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow_residential-8j4NdC7zadMHWsQCivcCaL.webp";
+const SERVICE_DEMOLITION = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_demolition_residential-U5oFvppCkC74xcHMjba7yH.webp";
+const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_residential-2TjqnTh9MJvgk8auxgRdFa.webp";
+const SERVICE_PROPERTY_SERVICES = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_property_residential-M3qcrB6bpo4GkdEgLCxmpn.webp";
 const FB_COVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/fb_cover_banner_f7540e08.jpeg";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
