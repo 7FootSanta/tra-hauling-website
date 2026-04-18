@@ -15,7 +15,7 @@ const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/31051966303494
 const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling-CpJAETY68DyyYBZFnNuhxv.webp";
 const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow-PP4RcndMnjVuP3kXcezsSd.webp";
 const SERVICE_DEMOLITION = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_demolition-ksWFduDDR35FaKjywdBFWM.webp";
-const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_removal-f2vXu6SswHRj8vvLB9picN.webp";
+const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_removal-atavvMdVomU8J5eC5faAdC.webp";
 const FB_COVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/fb_cover_banner_f7540e08.jpeg";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
