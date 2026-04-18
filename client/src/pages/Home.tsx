@@ -15,6 +15,7 @@ const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/31051966303494
 const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling-CpJAETY68DyyYBZFnNuhxv.webp";
 const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow-PP4RcndMnjVuP3kXcezsSd.webp";
 const SERVICE_DEMOLITION = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_demolition-ksWFduDDR35FaKjywdBFWM.webp";
+const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_removal-f2vXu6SswHRj8vvLB9picN.webp";
 const FB_COVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/fb_cover_banner_f7540e08.jpeg";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -55,7 +56,7 @@ const SERVICES: Service[] = [
     icon: <Trash2 className="w-8 h-8" />,
     title: "Junk Removal",
     description: "Professional junk removal in the Palmerton, PA area. Quick, affordable cleanup for residential and commercial properties. Same-day service available.",
-    image: SERVICE_HAULING,
+    image: SERVICE_JUNK_REMOVAL,
   },
   {
     icon: <Wrench className="w-8 h-8" />,
