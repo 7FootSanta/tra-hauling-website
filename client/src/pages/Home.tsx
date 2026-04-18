@@ -11,11 +11,12 @@ import { Phone, Mail, MapPin, Clock, ChevronDown, Menu, X, Facebook, Star, Truck
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/hero_banner-KggwAoz9RQfnfGhAzu86AP.webp";
-const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_excavating-JHM6xVcnyvcPDff87X757G.webp";
-const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling-CpJAETY68DyyYBZFnNuhxv.webp";
+const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_excavating_v2-6c3aDgGVB6r7BNQHgvwH3R.webp";
+const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling_v2-MeLMp7NzW53XvWgbFZ9D8g.webp";
 const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow-PP4RcndMnjVuP3kXcezsSd.webp";
 const SERVICE_DEMOLITION = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_demolition-ksWFduDDR35FaKjywdBFWM.webp";
 const SERVICE_JUNK_REMOVAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_junk_removal-atavvMdVomU8J5eC5faAdC.webp";
+const SERVICE_PROPERTY_SERVICES = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_property_services_v2-7dQViaeGdSkVyXMgSgDfjp.webp";
 const FB_COVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/fb_cover_banner_f7540e08.jpeg";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -62,7 +63,7 @@ const SERVICES: Service[] = [
     icon: <Wrench className="w-8 h-8" />,
     title: "Property Services",
     description: "All-inclusive property services in the Palmerton, PA area. Site preparation, cleanup, maintenance, and improvement. One-stop solution for all your property needs.",
-    image: SERVICE_EXCAVATING,
+    image: SERVICE_PROPERTY_SERVICES,
   },
 ];
 
