@@ -630,7 +630,7 @@ function ContactSection() {
     }
     
     try {
-      const response = await fetch('https://formspree.io/f/xojyldyd', {
+      const response = await fetch('https://usebasin.com/f/fa1fdbdf6ca4', {
         method: 'POST',
         body: formData,
       });
