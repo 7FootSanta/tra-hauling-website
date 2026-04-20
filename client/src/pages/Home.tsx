@@ -892,7 +892,7 @@ function FAQSection() {
     },
     {
       question: "How do I get started?",
-      answer: "Getting started is easy! Call us at (570) 249-8566, email trahauling@gmail.com, or use the contact form on this page. We'll discuss your project and provide a free estimate.",
+      answer: "Getting started is easy! Call us at (570) 249-8566, email trahaulingandexcavating@gmail.com, or use the contact form on this page. We'll discuss your project and provide a free estimate.",
     },
   ];
 
