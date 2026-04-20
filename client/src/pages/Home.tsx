@@ -612,9 +612,44 @@ function ContactSection() {
     setPhotoPreview(previews);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    
+    // Create FormData to handle file uploads
+    const formData = new FormData();
+    formData.append('name', form.name || '');
+    formData.append('phone', form.phone || '');
+    formData.append('email', form.email || '');
+    formData.append('message', form.message || '');
+    
+    // Add photos if any
+    if (form.photos && form.photos.length > 0) {
+      form.photos.forEach((photo, index) => {
+        formData.append(`photo_${index}`, photo);
+      });
+    }
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xojyldyd', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setForm({ name: '', phone: '', email: '', message: '', photos: [] });
+          setPhotoPreview([]);
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error sending message. Please try again.');
+    }
   };
 
   return (
@@ -665,7 +700,7 @@ function ContactSection() {
               </a>
 
               <a
-                href="mailto:trahauling@gmail.com"
+                href="mailto:trahaulingandexcavating@gmail.com"
                 className="flex items-center gap-4"
               >
                 <div className="w-12 h-12 flex items-center justify-center" style={{ background: "#2a2a2a" }}>
@@ -673,7 +708,7 @@ function ContactSection() {
                 </div>
                 <div>
                   <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888" }}>Email Us</div>
-                  <div style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", color: "#ccc" }}>trahauling@gmail.com</div>
+                  <div style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", color: "#ccc" }}>trahaulingandexcavating@gmail.com</div>
                 </div>
               </a>
 
