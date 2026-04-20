@@ -462,7 +462,7 @@ function AboutSection() {
             <div className="mt-8 space-y-4">
               {[
                 { icon: <Phone className="w-5 h-5" />, label: "(570) 249-8566", href: "tel:5702498566" },
-                { icon: <Mail className="w-5 h-5" />, label: "trahauling@gmail.com", href: "mailto:trahauling@gmail.com" },
+                { icon: <Mail className="w-5 h-5" />, label: "trahaulingandexcavating@gmail.com", href: "mailto:trahaulingandexcavating@gmail.com" },
                 { icon: <MapPin className="w-5 h-5" />, label: "1087 Fireline Rd, Palmerton, PA", href: "#" },
                 { icon: <Clock className="w-5 h-5" />, label: "Always Open — 24/7", href: "#" },
               ].map((item) => (
@@ -970,9 +970,9 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:trahauling@gmail.com" className="flex items-center gap-2 text-sm transition-colors hover:text-yellow-400" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
-                  <Mail className="w-4 h-4 text-yellow-400" />
-                  trahauling@gmail.com
+                <a href="mailto:trahaulingandexcavating@gmail.com" className="flex items-center gap-2 text-sm transition-colors hover:text-yellow-400" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
+                  <Mail className="w-4 h-4" />
+                  trahaulingandexcavating@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm" style={{ color: "#888", fontFamily: "'Barlow', sans-serif" }}>
