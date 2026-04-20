@@ -591,6 +591,7 @@ function ReviewsSection() {
   );
 }
 
+// Contact section - form removed, showing contact info only
 function ContactSection() {
   const { ref, visible } = useScrollReveal();
   const [form, setForm] = useState<{ name: string; phone: string; email: string; message: string; photos: File[] }>({
