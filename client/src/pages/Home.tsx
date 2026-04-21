@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import { Phone, Mail, MapPin, Clock, ChevronDown, Menu, X, Facebook, Star, Truck, Shovel, Snowflake, Trash2, Building2, Wrench } from "lucide-react";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/hero_banner-KggwAoz9RQfnfGhAzu86AP.webp";
+const HERO_BG = "/tra-truck-hero.png";
 const SERVICE_EXCAVATING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_excavating_residential-DKepQuR7wVfdmFmYppauVr.webp";
 const SERVICE_HAULING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_hauling_residential-So4hXCFWZ37wArBA8sZHaP.webp";
 const SERVICE_SNOW = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/service_snow_residential-8j4NdC7zadMHWsQCivcCaL.webp";
