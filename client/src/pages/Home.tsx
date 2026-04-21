@@ -744,7 +744,7 @@ function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Your Name</label>
+                  <label htmlFor="name" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Your Name</label>
                   <input
                     id="name"
                     name="name"
@@ -758,7 +758,7 @@ function ContactSection() {
                 </div>
 
                 <div>
-                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Phone Number</label>
+                  <label htmlFor="phone" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Phone Number</label>
                   <input
                     id="phone"
                     name="phone"
@@ -772,7 +772,7 @@ function ContactSection() {
                 </div>
 
                 <div>
-                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Email Address</label>
+                  <label htmlFor="email" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Email Address</label>
                   <input
                     id="email"
                     name="email"
@@ -786,7 +786,7 @@ function ContactSection() {
                 </div>
 
                 <div>
-                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>How Can We Help?</label>
+                  <label htmlFor="message" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>How Can We Help?</label>
                   <textarea
                     id="message"
                     name="message"
