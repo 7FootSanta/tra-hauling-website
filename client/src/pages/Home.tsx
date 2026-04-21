@@ -631,7 +631,7 @@ function ContactSection() {
     }
     
     try {
-      const response = await fetch('https://usebasin.com/f/fa1fdbdf6ca4', {
+      const response = await fetch('https://formspree.io/f/xlgapeak', {
         method: 'POST',
         body: formData,
       });
@@ -754,7 +754,92 @@ function ContactSection() {
               </p>
             </div>
 
+            {/* Contact Form */}
+            {submitted ? (
+              <div className="p-6 text-center" style={{ background: "#111", border: "2px solid #F5C400", borderRadius: "4px" }}>
+                <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.5rem", color: "#F5C400", marginBottom: "0.5rem" }}>✓ MESSAGE SENT!</div>
+                <p style={{ color: "#aaa", fontFamily: "'Barlow', sans-serif" }}>Thank you! We'll get back to you soon.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Your Name</label>
+                  <input
+                    type="text"
+                    placeholder="John Smith"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    required
+                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
+                  />
+                </div>
 
+                <div>
+                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Phone Number</label>
+                  <input
+                    type="tel"
+                    placeholder="(570) 000-0000"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    required
+                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Email Address</label>
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    required
+                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>How Can We Help?</label>
+                  <textarea
+                    placeholder="Describe the job or service you need..."
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    required
+                    rows={4}
+                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px", resize: "none" }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Upload Photos (Optional)</label>
+                  <input
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    onChange={handlePhotoChange}
+                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#888", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
+                  />
+                  <p style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.25rem", fontFamily: "'Barlow', sans-serif" }}>Upload up to 5 photos to show the project area</p>
+                </div>
+
+                {photoPreview.length > 0 && (
+                  <div className="grid grid-cols-3 gap-2">
+                    {photoPreview.map((preview, idx) => (
+                      <img key={idx} src={preview} alt={`Preview ${idx}`} style={{ width: "100%", height: "100px", objectFit: "cover", borderRadius: "4px", border: "1px solid #2a2a2a" }} />
+                    ))}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  style={{ width: "100%", padding: "1rem", background: "#F5C400", color: "#1A1A1A", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", letterSpacing: "0.1em", textTransform: "uppercase", border: "none", borderRadius: "4px", cursor: "pointer", transition: "all 0.3s ease" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#E5B800")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "#F5C400")}
+                >
+                  Send Message
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
