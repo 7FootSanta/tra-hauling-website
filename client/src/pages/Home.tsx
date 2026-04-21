@@ -354,7 +354,7 @@ function ServicesSection() {
               }}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <a href="#contact" className="relative h-48 overflow-hidden block cursor-pointer">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -364,7 +364,7 @@ function ServicesSection() {
                 <div className="absolute bottom-3 left-4 flex items-center gap-2" style={{ color: "#F5C400" }}>
                   {service.icon}
                 </div>
-              </div>
+              </a>
               {/* Content */}
               <div className="p-5">
                 <h3
