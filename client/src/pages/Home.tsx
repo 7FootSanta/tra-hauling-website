@@ -602,16 +602,7 @@ function ContactSection() {
     photos: [],
   });
   const [submitted, setSubmitted] = useState(false);
-  const [photoPreview, setPhotoPreview] = useState<string[]>([]);
 
-  const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
-    setForm({ ...form, photos: files });
-    
-    // Create preview URLs
-    const previews = files.map(file => URL.createObjectURL(file));
-    setPhotoPreview(previews);
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -623,12 +614,7 @@ function ContactSection() {
     formData.append('email', form.email || '');
     formData.append('message', form.message || '');
     
-    // Add photos if any
-    if (form.photos && form.photos.length > 0) {
-      form.photos.forEach((photo, index) => {
-        formData.append(`photo_${index}`, photo);
-      });
-    }
+
     
     try {
       const response = await fetch('https://formspree.io/f/xlgapeak', {
@@ -639,7 +625,6 @@ function ContactSection() {
       setSubmitted(true);
       setTimeout(() => {
         setForm({ name: '', phone: '', email: '', message: '', photos: [] });
-        setPhotoPreview([]);
         setSubmitted(false);
       }, 3000);
     } catch (error) {
@@ -647,7 +632,6 @@ function ContactSection() {
       setSubmitted(true);
       setTimeout(() => {
         setForm({ name: '', phone: '', email: '', message: '', photos: [] });
-        setPhotoPreview([]);
         setSubmitted(false);
       }, 3000);
     }
@@ -810,25 +794,7 @@ function ContactSection() {
                   />
                 </div>
 
-                <div>
-                  <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Upload Photos (Optional)</label>
-                  <input
-                    type="file"
-                    multiple
-                    accept="image/*"
-                    onChange={handlePhotoChange}
-                    style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#888", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
-                  />
-                  <p style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.25rem", fontFamily: "'Barlow', sans-serif" }}>Upload up to 5 photos to show the project area</p>
-                </div>
 
-                {photoPreview.length > 0 && (
-                  <div className="grid grid-cols-3 gap-2">
-                    {photoPreview.map((preview, idx) => (
-                      <img key={idx} src={preview} alt={`Preview ${idx}`} style={{ width: "100%", height: "100px", objectFit: "cover", borderRadius: "4px", border: "1px solid #2a2a2a" }} />
-                    ))}
-                  </div>
-                )}
 
                 <button
                   type="submit"
