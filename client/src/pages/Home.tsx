@@ -123,7 +123,7 @@ function Navbar() {
             alt="TRA Hauling & Excavating"
             style={{ height: "64px", width: "auto", objectFit: "contain" }}
           />
-          <span className="hidden lg:block" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
         </a>
 
         {/* Desktop Nav */}
@@ -161,11 +161,6 @@ function Navbar() {
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-      </div>
-
-      {/* Mobile/Tablet brand text below navbar */}
-      <div className="lg:hidden w-full text-center py-3" style={{ background: "#1A1A1A", borderBottom: "1px solid rgba(245,196,0,0.2)" }}>
-        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
       </div>
 
       {/* Mobile menu */}
