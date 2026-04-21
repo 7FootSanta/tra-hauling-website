@@ -218,7 +218,7 @@ function HeroSection() {
       />
 
 
-      <div className="container relative z-10 pt-24 pb-32">
+      <div className="container relative z-10 pt-16 md:pt-24 pb-16 md:pb-32">
         <div className="max-w-2xl">
           {/* Pre-label */}
           <div
@@ -288,7 +288,7 @@ function HeroSection() {
           </div>
 
           {/* Quick stats */}
-          <div className="mt-14 flex flex-wrap gap-8">
+          <div className="mt-6 md:mt-14 flex flex-wrap gap-4 md:gap-8">
             {[
               { value: "24/7", label: "Always Available" },
               { value: "6+", label: "Services Offered" },
