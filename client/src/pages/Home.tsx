@@ -117,12 +117,13 @@ function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center gap-3">
           <img
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034943704/bywshlcdqAsCvGKN.webp"
             alt="TRA Hauling & Excavating"
             style={{ height: "64px", width: "auto", objectFit: "contain" }}
           />
+          <span className="hidden lg:block" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
         </a>
 
         {/* Desktop Nav */}
