@@ -127,7 +127,7 @@ function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
               key={l.label}
@@ -140,7 +140,7 @@ function Navbar() {
           ))}
           <a
             href="tel:5702498566"
-            className="flex items-center gap-2 px-5 py-2.5 font-bold text-sm tracking-wider uppercase transition-all hover:scale-105"
+            className="hidden lg:flex items-center gap-2 px-5 py-2.5 font-bold text-sm tracking-wider uppercase transition-all hover:scale-105"
             style={{
               background: "#F5C400",
               color: "#1A1A1A",
