@@ -119,7 +119,7 @@ function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663034943704/F8FCmMf3GJ9os3KA54mU9k/tra_logo_transparent_7d8bd3bc_0f7ee91a.webp"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034943704/bywshlcdqAsCvGKN.webp"
             alt="TRA Hauling & Excavating"
             style={{ height: "64px", width: "auto", objectFit: "contain" }}
           />
