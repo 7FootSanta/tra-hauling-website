@@ -216,11 +216,7 @@ function HeroSection() {
           background: "linear-gradient(105deg, rgba(26,26,26,0.95) 40%, rgba(26,26,26,0.3) 100%)",
         }}
       />
-      {/* Yellow diagonal accent stripe */}
-      <div
-        className="absolute left-0 top-0 bottom-0 w-1.5"
-        style={{ background: "#F5C400" }}
-      />
+
 
       <div className="container relative z-10 pt-24 pb-32">
         <div className="max-w-2xl">
