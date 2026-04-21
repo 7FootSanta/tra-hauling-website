@@ -636,17 +636,12 @@ function ContactSection() {
         body: formData,
       });
       
-      if (response.ok || response.status === 200) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setForm({ name: '', phone: '', email: '', message: '', photos: [] });
-          setPhotoPreview([]);
-          setSubmitted(false);
-        }, 3000);
-      } else {
-        console.error('Form submission failed:', response.status);
-        alert('Failed to send message. Please try again.');
-      }
+      setSubmitted(true);
+      setTimeout(() => {
+        setForm({ name: '', phone: '', email: '', message: '', photos: [] });
+        setPhotoPreview([]);
+        setSubmitted(false);
+      }, 3000);
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitted(true);
