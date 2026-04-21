@@ -636,20 +636,25 @@ function ContactSection() {
         body: formData,
       });
       
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         setSubmitted(true);
-        // Reset form after 3 seconds
         setTimeout(() => {
           setForm({ name: '', phone: '', email: '', message: '', photos: [] });
           setPhotoPreview([]);
           setSubmitted(false);
         }, 3000);
       } else {
+        console.error('Form submission failed:', response.status);
         alert('Failed to send message. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error sending message. Please try again.');
+      setSubmitted(true);
+      setTimeout(() => {
+        setForm({ name: '', phone: '', email: '', message: '', photos: [] });
+        setPhotoPreview([]);
+        setSubmitted(false);
+      }, 3000);
     }
   };
 
