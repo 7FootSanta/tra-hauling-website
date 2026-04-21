@@ -121,9 +121,9 @@ function Navbar() {
           <img
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034943704/bywshlcdqAsCvGKN.webp"
             alt="TRA Hauling & Excavating"
-            style={{ height: "64px", width: "auto", objectFit: "contain" }}
+            style={{ height: "40px", width: "auto", objectFit: "contain" }}
           />
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.85rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase", whiteSpace: "nowrap" }}>TRA Hauling & Excavating</span>
         </a>
 
         {/* Desktop Nav */}
