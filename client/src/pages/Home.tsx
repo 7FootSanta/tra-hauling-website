@@ -163,6 +163,11 @@ function Navbar() {
         </button>
       </div>
 
+      {/* Mobile/Tablet brand text below navbar */}
+      <div className="lg:hidden w-full text-center py-3" style={{ background: "#1A1A1A", borderBottom: "1px solid rgba(245,196,0,0.2)" }}>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#F5C400", letterSpacing: "0.05em", textTransform: "uppercase" }}>TRA Hauling & Excavating</span>
+      </div>
+
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden" style={{ background: "#1A1A1A", borderTop: "2px solid #F5C400" }}>
