@@ -746,6 +746,8 @@ function ContactSection() {
                 <div>
                   <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Your Name</label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
                     placeholder="John Smith"
                     value={form.name}
@@ -758,6 +760,8 @@ function ContactSection() {
                 <div>
                   <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Phone Number</label>
                   <input
+                    id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="(570) 000-0000"
                     value={form.phone}
@@ -770,6 +774,8 @@ function ContactSection() {
                 <div>
                   <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>Email Address</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     placeholder="you@example.com"
                     value={form.email}
@@ -782,6 +788,8 @@ function ContactSection() {
                 <div>
                   <label style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", display: "block", marginBottom: "0.5rem" }}>How Can We Help?</label>
                   <textarea
+                    id="message"
+                    name="message"
                     placeholder="Describe the job or service you need..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
