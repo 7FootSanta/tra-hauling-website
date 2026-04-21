@@ -752,6 +752,7 @@ function ContactSection() {
                     placeholder="John Smith"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    autoComplete="name"
                     required
                     style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
                   />
@@ -766,6 +767,7 @@ function ContactSection() {
                     placeholder="(570) 000-0000"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    autoComplete="tel"
                     required
                     style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
                   />
@@ -780,6 +782,7 @@ function ContactSection() {
                     placeholder="you@example.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    autoComplete="email"
                     required
                     style={{ width: "100%", padding: "0.75rem", background: "#111", border: "1px solid #2a2a2a", color: "#fff", fontFamily: "'Barlow', sans-serif", borderRadius: "4px" }}
                   />
